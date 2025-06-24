@@ -94,7 +94,8 @@ const Features = () => {
                 <div className="text-3xl md:text-4xl font-bold text-safe mb-2">1M+</div>
                 <div className="text-gray-600">Products Scanned</div>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-safe mb-2">100%</div>
+              <div>
+                <div className="text-3xl md:text-4xl font-bold text-safe mb-2">100%</div>
                 <div className="text-gray-600">Free to Use</div>
               </div>
               <div>
