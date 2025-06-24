@@ -16,7 +16,7 @@ const HowItWorks = () => {
       icon: <Brain className="h-16 w-16 text-blue-600" />,
       emoji: "🧠", 
       title: "AI Analysis",
-      subtitle: "Smarter than Yuka's database.",
+      subtitle: "Smarter ingredient insights.",
       description: "Our AI processes 500+ Indian regulations, cultural preferences, and health data to give you personalized safety insights.",
       features: ["Cultural filters", "Allergy detection", "Health impact analysis"],
       color: "from-blue-200/50 to-blue-100/30"
@@ -33,16 +33,16 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll">
           <div className="inline-flex items-center space-x-2 bg-safe/10 rounded-full px-6 py-3 mb-6">
             <span className="w-2 h-2 bg-safe rounded-full animate-pulse"></span>
             <span className="text-safe font-semibold">How It Works</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             3 Steps to
-            <span className="block bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent mt-2">
               Safer Choices
             </span>
           </h2>
@@ -73,7 +73,7 @@ const HowItWorks = () => {
                   </div>
 
                   {/* Icon */}
-                  <div className="text-7xl mb-6 group-hover:scale-110 transition-transform duration-300 text-center">
+                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300 text-center">
                     {step.emoji}
                   </div>
 
@@ -105,8 +105,8 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        {/* Enhanced CTA */}
-        <div className="text-center mt-20 animate-on-scroll">
+        {/* Stats */}
+        <div className="text-center mt-16 animate-on-scroll">
           <div className="bg-gradient-to-r from-safe/10 via-blue-50 to-safe/10 rounded-3xl p-8 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>

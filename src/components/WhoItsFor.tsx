@@ -42,16 +42,16 @@ const WhoItsFor = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll">
           <div className="inline-flex items-center space-x-2 bg-safe/10 rounded-full px-6 py-3 mb-6">
             <span className="w-2 h-2 bg-safe rounded-full animate-pulse"></span>
             <span className="text-safe font-semibold">Who It's For</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Built for Every
-            <span className="block bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent mt-2">
               Indian Family
             </span>
           </h2>
@@ -60,7 +60,7 @@ const WhoItsFor = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           {userTypes.map((user, index) => (
             <div 
               key={index}
