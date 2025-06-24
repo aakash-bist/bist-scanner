@@ -2,37 +2,37 @@
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Nutrition Coach",
-      content: "Is-It-Safe has revolutionized how I help my clients make informed choices. The ingredient analysis is incredibly detailed and easy to understand.",
-      avatar: "👩‍⚕️",
+      name: "Pooja Sharma",
+      location: "Delhi",
+      content: "I avoided over 20 harmful ingredients this month! This app has completely changed how I shop for my family.",
+      avatar: "👩",
       rating: 5
     },
     {
-      name: "Michael Rodriguez", 
-      role: "Parent of 3",
-      content: "Finally, an app that helps me understand what I'm actually buying for my family. No more guessing - just clear, honest information.",
-      avatar: "👨‍👧‍👦",
+      name: "Arvind Kumar", 
+      location: "Bangalore",
+      content: "Finally, an app that understands Indian products. Works perfectly with local brands that international apps miss.",
+      avatar: "👨",
       rating: 5
     },
     {
-      name: "Dr. Emily Watson",
-      role: "Dermatologist",
-      content: "I recommend Is-It-Safe to all my patients with sensitive skin. The cosmetic analysis feature is particularly impressive and scientifically sound.",
-      avatar: "👩‍⚕️",
+      name: "Priya Patel",
+      role: "New Mother",
+      content: "As a new mom, this gives me peace of mind when choosing baby products. The Hindi support is really helpful too!",
+      avatar: "👶",
       rating: 5
     }
   ];
 
   const stats = [
-    { number: "4.9", label: "App Store Rating", suffix: "★" },
-    { number: "1M+", label: "Downloads", suffix: "" },
-    { number: "50K+", label: "Daily Scans", suffix: "" },
-    { number: "99%", label: "User Satisfaction", suffix: "%" }
+    { number: "4.8", label: "App Store Rating", suffix: "★" },
+    { number: "50K+", label: "Downloads", suffix: "" },
+    { number: "10K+", label: "Daily Scans", suffix: "" },
+    { number: "95%", label: "User Satisfaction", suffix: "%" }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 animate-on-scroll">
@@ -48,14 +48,14 @@ const Testimonials = () => {
 
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Trusted by Health Professionals
+            Trusted by Indian Families
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Join thousands of users who've made smarter, safer choices with Is-It-Safe
+            Join thousands of health-conscious Indians making safer choices every day
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
@@ -77,20 +77,32 @@ const Testimonials = () => {
               
               <div className="text-center">
                 <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                <div className="text-sm text-gray-500">{testimonial.role}</div>
+                <div className="text-sm text-gray-500">{testimonial.location || testimonial.role}</div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Trust badges */}
-        <div className="mt-16 text-center animate-on-scroll">
-          <p className="text-gray-500 mb-8">Featured in:</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400">
-            <div className="px-6 py-3 border border-gray-200 rounded-lg bg-white">TechCrunch</div>
-            <div className="px-6 py-3 border border-gray-200 rounded-lg bg-white">Health.com</div>
-            <div className="px-6 py-3 border border-gray-200 rounded-lg bg-white">Forbes</div>
-            <div className="px-6 py-3 border border-gray-200 rounded-lg bg-white">Medical News</div>
+        {/* FAQ Preview */}
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto animate-on-scroll">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Quick Answers</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Does it work on Indian regional brands?</h4>
+              <p className="text-gray-600 text-sm">✅ Yes, our OCR works even without barcodes.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Do I need internet connection?</h4>
+              <p className="text-gray-600 text-sm">⚠️ Basic scans work offline, detailed analysis needs connection.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Does it support cultural preferences?</h4>
+              <p className="text-gray-600 text-sm">✅ Yes, filters for Jain, Halal, and more.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Is it really free?</h4>
+              <p className="text-gray-600 text-sm">✅ Yes, completely free with no hidden charges.</p>
+            </div>
           </div>
         </div>
       </div>

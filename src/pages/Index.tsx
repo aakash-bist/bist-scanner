@@ -1,6 +1,7 @@
 
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
+import WhoItsFor from "@/components/WhoItsFor";
 import Features from "@/components/Features";
 import AppShowcase from "@/components/AppShowcase";
 import Testimonials from "@/components/Testimonials";
@@ -33,6 +34,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Hero />
       <HowItWorks />
+      <WhoItsFor />
       <Features />
       <AppShowcase />
       <Testimonials />

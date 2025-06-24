@@ -15,14 +15,30 @@ const FinalCTA = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-on-scroll">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-            Start Scanning 
-            <span className="block text-safe-light">Smarter Today</span>
+            Make Smarter, Safer 
+            <span className="block text-safe-light">Choices Every Day</span>
           </h2>
           
           <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Join millions of people making informed decisions about their health. 
-            <span className="block mt-2 font-semibold">Your safety is worth more than marketing promises.</span>
+            Join 50,000+ Indians who trust Is This Safe? for healthier living.
+            <span className="block mt-2 font-semibold">Effortlessly scan, understand, and choose better.</span>
           </p>
+
+          {/* Key benefits */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center space-x-2">
+              <span className="text-2xl">✅</span>
+              <span className="font-medium">Free to use</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <span className="text-2xl">✅</span>
+              <span className="font-medium">Built for Indian users</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <span className="text-2xl">✅</span>
+              <span className="font-medium">Trusted by 50,000+ shoppers</span>
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -30,60 +46,40 @@ const FinalCTA = () => {
               size="lg"
               className="bg-white text-safe hover:bg-gray-100 px-10 py-6 text-xl font-semibold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
             >
-              <Download className="mr-3 h-6 w-6" />
-              Download Now
+              <span className="text-2xl mr-3">🍎</span>
+              App Store
             </Button>
             <Button 
-              variant="outline"
               size="lg"
-              className="border-2 border-white/30 text-white hover:bg-white/10 px-10 py-6 text-xl font-semibold rounded-2xl backdrop-blur-sm transition-all duration-200"
+              className="bg-white text-safe hover:bg-gray-100 px-10 py-6 text-xl font-semibold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
             >
-              <Smartphone className="mr-3 h-6 w-6" />
-              Try Demo
+              <span className="text-2xl mr-3">🤖</span>
+              Play Store
             </Button>
-          </div>
-
-          {/* App store badges */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4">
-              <span className="text-2xl">📱</span>
-              <div className="text-left">
-                <div className="text-sm opacity-80">Download on the</div>
-                <div className="font-bold">App Store</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4">
-              <span className="text-2xl">🤖</span>
-              <div className="text-left">
-                <div className="text-sm opacity-80">Get it on</div>
-                <div className="font-bold">Google Play</div>
-              </div>
-            </div>
           </div>
 
           {/* Final stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-8">
             <div>
-              <div className="text-3xl font-bold mb-2">1M+</div>
-              <div className="text-sm opacity-80">Products Analyzed</div>
+              <div className="text-3xl font-bold mb-2">50K+</div>
+              <div className="text-sm opacity-80">Happy Users</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">4.9★</div>
+              <div className="text-3xl font-bold mb-2">4.8★</div>
               <div className="text-sm opacity-80">User Rating</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">100%</div>
-              <div className="text-sm opacity-80">Ad-Free</div>
+              <div className="text-3xl font-bold mb-2">Free</div>
+              <div className="text-sm opacity-80">Forever</div>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 120" fill="none" className="w-full h-auto">
-          <path d="M0,60 C200,20 400,100 600,60 C800,20 1000,100 1200,60 L1200,120 L0,120 Z" fill="white"/>
-        </svg>
+          {/* Made in India badge */}
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+            <span className="text-2xl">❤️</span>
+            <span className="font-medium">Made with love in India</span>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -7,19 +7,19 @@ const HowItWorks = () => {
       icon: <Smartphone className="h-12 w-12 text-safe" />,
       emoji: "📱",
       title: "Scan the Product",
-      description: "Simply point your camera at any barcode on food or cosmetic products"
+      description: "Point your camera at any product label - works even without barcodes on Indian regional brands"
     },
     {
       icon: <Search className="h-12 w-12 text-caution" />,
       emoji: "🧪", 
-      title: "See Safety Score",
-      description: "Get an instant color-coded safety rating based on ingredient analysis"
+      title: "Get AI Analysis",
+      description: "Receive instant ingredient analysis and safety insights powered by advanced AI technology"
     },
     {
       icon: <Shield className="h-12 w-12 text-safe" />,
       emoji: "🛡️",
-      title: "Read Detailed Insights",
-      description: "Understand ingredient risks and get personalized recommendations"
+      title: "See Safer Alternatives",
+      description: "Get personalized recommendations for cleaner products available on Amazon, Flipkart, and Nykaa"
     }
   ];
 
@@ -31,7 +31,7 @@ const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Three simple steps to make informed decisions about the products you use
+            Three simple steps to make informed decisions about the products you use daily
           </p>
         </div>
 
@@ -76,7 +76,7 @@ const HowItWorks = () => {
         <div className="text-center mt-16 animate-on-scroll">
           <div className="inline-flex items-center space-x-2 bg-safe/10 rounded-full px-6 py-3">
             <div className="w-2 h-2 bg-safe rounded-full animate-pulse"></div>
-            <span className="text-safe font-medium">Ready in seconds, trusted for life</span>
+            <span className="text-safe font-medium">Works offline for basic scans • Deep analysis needs internet</span>
           </div>
         </div>
       </div>
