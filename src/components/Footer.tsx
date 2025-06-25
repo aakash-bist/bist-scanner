@@ -1,7 +1,8 @@
-
 import { Shield, Heart, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -13,8 +14,8 @@ const Footer = () => {
                 <Shield className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold">Is This Safe?</h3>
-                <p className="text-gray-400 text-sm">Your Product Safety Guardian</p>
+                <h3 className="text-lg font-bold">Isify</h3>
+                <p className="text-gray-400 text-sm">Because Safety Isn't a Guess</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -22,7 +23,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-2 text-orange-400">
               <Heart className="h-4 w-4" />
-              <span className="text-sm">Made with love in India</span>
+              <span className="text-sm">Made with love in Noida</span>
             </div>
           </div>
 
@@ -54,7 +55,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@isthissafe.app</span>
+                <span>hello@isify.app</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -62,7 +63,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>Bangalore, India</span>
+                <span>Noida, India</span>
               </div>
             </div>
           </div>
@@ -72,7 +73,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              © 2024 Is This Safe. All rights reserved.
+              © {currentYear} Isify. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>

@@ -1,4 +1,3 @@
-
 import { Heart, Users, Shield, Award, Target, Zap } from "lucide-react";
 
 const Mission = () => {
@@ -45,9 +44,9 @@ const Mission = () => {
             <span className="text-safe font-semibold">Our Mission</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-            Democratizing
+            Because Safety
             <span className="block bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent">
-              Product Safety
+              Isn't a Guess
             </span>
           </h2>
           <div className="text-xl md:text-2xl text-gray-700 leading-relaxed space-y-6">

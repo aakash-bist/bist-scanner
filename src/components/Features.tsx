@@ -53,7 +53,7 @@ const Features = () => {
   ];
 
   const comparisons = [
-    { app: "Is This Safe", ocr: true, indian: true, hindi: true, cultural: true, ecommerce: true },
+    { app: "Isify", ocr: true, indian: true, hindi: true, cultural: true, ecommerce: true },
     { app: "Other Apps", ocr: false, indian: false, hindi: false, cultural: false, ecommerce: false }
   ];
 
@@ -84,9 +84,9 @@ const Features = () => {
               className="group animate-on-scroll"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`relative bg-gradient-to-br ${feature.color} rounded-3xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 border border-white/50`}>
+              <div className="relative bg-white rounded-3xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 border border-gray-200">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="p-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-4 bg-white rounded-2xl group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
                   <div className="text-right">
@@ -110,7 +110,7 @@ const Features = () => {
 
         {/* Enhanced comparison section */}
         <div className="animate-on-scroll mb-20">
-          <div className="bg-gradient-to-br from-white via-safe/5 to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden border border-gray-100 max-w-5xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 max-w-5xl mx-auto">
             <div className="bg-gradient-to-r from-safe via-safe-dark to-blue-600 p-8">
               <h3 className="text-3xl font-bold text-white text-center mb-2">
                 Why Choose Us?
@@ -119,74 +119,37 @@ const Features = () => {
                 Compare features that matter for Indian families
               </p>
             </div>
-            
             <div className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Our App */}
-                <div className="bg-gradient-to-br from-safe/10 to-safe/5 rounded-2xl p-6 border-2 border-safe/20">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-4 h-4 bg-safe rounded-full"></div>
-                    <h4 className="text-xl font-bold text-safe">Is This Safe</h4>
-                    <span className="text-xs bg-safe text-white px-3 py-1 rounded-full font-bold">YOU</span>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">OCR Scanning</span>
-                      <div className="text-green-600 text-xl">✅</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">Indian Products</span>
-                      <div className="text-green-600 text-xl">✅</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">Hindi Support</span>
-                      <div className="text-green-600 text-xl">✅</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">Cultural Filters</span>
-                      <div className="text-green-600 text-xl">✅</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">E-commerce Links</span>
-                      <div className="text-green-600 text-xl">✅</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Other Apps */}
-                <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-4 h-4 bg-gray-400 rounded-full"></div>
-                    <h4 className="text-xl font-bold text-gray-700">Other Apps</h4>
-                    <span className="text-xs bg-gray-400 text-white px-3 py-1 rounded-full font-bold">THEM</span>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">OCR Scanning</span>
-                      <div className="text-red-500 text-xl">❌</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">Indian Products</span>
-                      <div className="text-red-500 text-xl">❌</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">Hindi Support</span>
-                      <div className="text-red-500 text-xl">❌</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">Cultural Filters</span>
-                      <div className="text-red-500 text-xl">❌</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">E-commerce Links</span>
-                      <div className="text-red-500 text-xl">❌</div>
-                    </div>
-                  </div>
-                </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-separate border-spacing-0 rounded-2xl overflow-hidden">
+                  <thead>
+                    <tr>
+                      <th className="py-3 px-4 text-base font-bold text-gray-700 bg-gray-50">Feature</th>
+                      <th className="py-3 px-4 text-base font-bold text-white bg-safe text-center">ISIFY</th>
+                      <th className="py-3 px-4 text-base font-bold text-gray-700 bg-gray-100 text-center">Other Apps</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { label: 'OCR Scanning', isify: true, other: false },
+                      { label: 'Indian Products', isify: true, other: false },
+                      { label: 'Hindi Support', isify: true, other: false },
+                      { label: 'Cultural Filters', isify: true, other: false },
+                      { label: 'E-commerce Links', isify: true, other: false },
+                    ].map((row, idx) => (
+                      <tr key={row.label} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                        <td className="py-4 px-4 text-base font-medium text-gray-900">{row.label}</td>
+                        <td className="text-center">
+                          <span className="inline-flex items-center justify-center w-8 h-8 bg-safe text-white rounded-full text-xl font-bold">✓</span>
+                        </td>
+                        <td className="text-center">
+                          <span className="inline-flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-400 rounded-full text-xl font-bold">✗</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-
               {/* Bottom CTA */}
               <div className="text-center mt-8">
                 <div className="bg-gradient-to-r from-safe/20 to-blue-500/20 rounded-2xl p-6">
@@ -238,3 +201,11 @@ const Features = () => {
 };
 
 export default Features;
+
+<style>
+{`
+  .isify-col {
+    background: transparent !important;
+  }
+`}
+</style>

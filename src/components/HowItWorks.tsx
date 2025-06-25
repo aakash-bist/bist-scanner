@@ -1,4 +1,3 @@
-
 import { Camera, Brain, ShieldCheck, ArrowRight, Zap, Target, Smartphone } from "lucide-react";
 
 const HowItWorks = () => {
@@ -15,13 +14,13 @@ const HowItWorks = () => {
     },
     {
       icon: <Brain className="h-16 w-16 text-blue-600" />,
-      emoji: "🧠", 
-      title: "AI Reads & Detects",
-      subtitle: "Smart ingredient analysis.",
+      emoji: "🧠",
+      title: "AI Analyzes",
+      subtitle: "Reads & Detects Harmful",
       description: "Our AI processes 500+ Indian regulations and health data to detect harmful ingredients and give you personalized safety insights.",
       features: ["Toxin detection", "Allergy alerts", "Health impact analysis"],
       color: "from-blue-200/50 to-blue-100/30",
-      flow: "AI READS → DETECTS HARMFUL"
+      flow: "AI ANALYZES"
     },
     {
       icon: <ShieldCheck className="h-16 w-16 text-purple-600" />,
@@ -61,12 +60,7 @@ const HowItWorks = () => {
                 <ArrowRight className="h-5 w-5 text-gray-400" />
                 <div className="flex items-center space-x-2 bg-blue-100 rounded-xl px-4 py-2">
                   <Brain className="h-5 w-5 text-blue-600" />
-                  <span className="text-blue-600">AI READS</span>
-                </div>
-                <ArrowRight className="h-5 w-5 text-gray-400" />
-                <div className="flex items-center space-x-2 bg-red-100 rounded-xl px-4 py-2">
-                  <Target className="h-5 w-5 text-red-600" />
-                  <span className="text-red-600">DETECTS HARMFUL</span>
+                  <span className="text-blue-600">AI ANALYZES</span>
                 </div>
                 <ArrowRight className="h-5 w-5 text-gray-400" />
                 <div className="flex items-center space-x-2 bg-purple-100 rounded-xl px-4 py-2">

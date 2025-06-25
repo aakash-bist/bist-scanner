@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Download, Star, Users, Shield, ArrowRight } from "lucide-react";
 
@@ -49,7 +48,7 @@ const FinalCTA = () => {
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto leading-relaxed">
             Join the revolution of informed shopping in India. 
             <span className="block mt-2 font-semibold text-yellow-200">
-              Download now and make your first scan in under 30 seconds.
+              Because Safety Isn't a Guess.
             </span>
           </p>
 
@@ -136,7 +135,7 @@ const FinalCTA = () => {
             <div className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
               <span className="text-3xl">🇮🇳</span>
               <div className="text-left">
-                <div className="font-bold">Proudly Made in India</div>
+                <div className="font-bold">Proudly Made in Noida</div>
                 <div className="text-sm opacity-80">For Indian families, by Indian developers</div>
               </div>
             </div>

@@ -1,4 +1,3 @@
-
 import { Shield, Heart, Dumbbell, Leaf } from "lucide-react";
 
 const WhoItsFor = () => {
@@ -67,7 +66,9 @@ const WhoItsFor = () => {
               className="group animate-on-scroll"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className={`relative bg-gradient-to-br ${user.color} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 border border-white/50 h-full`}>
+              <div className={
+                `relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 border border-gray-200 h-full`
+              }>
                 <div className="flex items-start space-x-6">
                   {/* Avatar and icon */}
                   <div className="flex-shrink-0">
@@ -75,7 +76,7 @@ const WhoItsFor = () => {
                       <div className="text-5xl group-hover:scale-110 transition-transform duration-300 mb-4">
                         {user.emoji}
                       </div>
-                      <div className="absolute -bottom-2 -right-2 p-2 bg-white rounded-xl shadow-lg">
+                      <div className="absolute -bottom-2 -right-2 p-2 bg-white rounded-xl">
                         {user.icon}
                       </div>
                     </div>
