@@ -1,5 +1,5 @@
 
-import { Camera, Brain, ShieldCheck, ArrowRight } from "lucide-react";
+import { Camera, Brain, ShieldCheck, ArrowRight, Zap, Target, Smartphone } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
@@ -10,30 +10,33 @@ const HowItWorks = () => {
       subtitle: "Point. Click. Done.",
       description: "Advanced OCR reads any product label - even handwritten regional brands without barcodes. Works in 12 Indian languages.",
       features: ["No barcode needed", "Works offline", "Instant recognition"],
-      color: "from-safe/20 to-safe/5"
+      color: "from-safe/20 to-safe/5",
+      flow: "SCAN"
     },
     {
       icon: <Brain className="h-16 w-16 text-blue-600" />,
       emoji: "🧠", 
-      title: "AI Analysis",
-      subtitle: "Smarter ingredient insights.",
-      description: "Our AI processes 500+ Indian regulations, cultural preferences, and health data to give you personalized safety insights.",
-      features: ["Cultural filters", "Allergy detection", "Health impact analysis"],
-      color: "from-blue-200/50 to-blue-100/30"
+      title: "AI Reads & Detects",
+      subtitle: "Smart ingredient analysis.",
+      description: "Our AI processes 500+ Indian regulations and health data to detect harmful ingredients and give you personalized safety insights.",
+      features: ["Toxin detection", "Allergy alerts", "Health impact analysis"],
+      color: "from-blue-200/50 to-blue-100/30",
+      flow: "AI READS → DETECTS HARMFUL"
     },
     {
       icon: <ShieldCheck className="h-16 w-16 text-purple-600" />,
       emoji: "🛡️",
-      title: "Smart Recommendations",
+      title: "Suggests Safer",
       subtitle: "Beyond just warnings.",
-      description: "Get curated alternatives available on Amazon, Flipkart, Nykaa with instant purchase links and price comparisons.",
-      features: ["Indian e-commerce links", "Price comparison", "Personal safe list"],
-      color: "from-purple-200/50 to-purple-100/30"
+      description: "Get curated safer alternatives available on Amazon, Flipkart, Nykaa with instant purchase links and price comparisons.",
+      features: ["Safer alternatives", "Price comparison", "Instant purchase links"],
+      color: "from-purple-200/50 to-purple-100/30",
+      flow: "SUGGESTS SAFER"
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <div className="inline-flex items-center space-x-2 bg-safe/10 rounded-full px-6 py-3 mb-6">
@@ -46,6 +49,34 @@ const HowItWorks = () => {
               Safer Choices
             </span>
           </h2>
+          
+          {/* Enhanced Scan Flow Highlight */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="bg-gradient-to-r from-safe/10 via-blue-50 to-purple-50 rounded-2xl p-6 border border-safe/20">
+              <div className="flex flex-wrap justify-center items-center gap-4 text-lg font-bold">
+                <div className="flex items-center space-x-2 bg-safe/20 rounded-xl px-4 py-2">
+                  <Smartphone className="h-5 w-5 text-safe" />
+                  <span className="text-safe">SCAN</span>
+                </div>
+                <ArrowRight className="h-5 w-5 text-gray-400" />
+                <div className="flex items-center space-x-2 bg-blue-100 rounded-xl px-4 py-2">
+                  <Brain className="h-5 w-5 text-blue-600" />
+                  <span className="text-blue-600">AI READS</span>
+                </div>
+                <ArrowRight className="h-5 w-5 text-gray-400" />
+                <div className="flex items-center space-x-2 bg-red-100 rounded-xl px-4 py-2">
+                  <Target className="h-5 w-5 text-red-600" />
+                  <span className="text-red-600">DETECTS HARMFUL</span>
+                </div>
+                <ArrowRight className="h-5 w-5 text-gray-400" />
+                <div className="flex items-center space-x-2 bg-purple-100 rounded-xl px-4 py-2">
+                  <ShieldCheck className="h-5 w-5 text-purple-600" />
+                  <span className="text-purple-600">SUGGESTS SAFER</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             More advanced than international apps. Built specifically for Indian products, preferences, and shopping habits.
           </p>
@@ -105,23 +136,23 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        {/* Stats */}
+        {/* Enhanced Stats */}
         <div className="text-center mt-16 animate-on-scroll">
           <div className="bg-gradient-to-r from-safe/10 via-blue-50 to-safe/10 rounded-3xl p-8 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl mb-2">⚡</div>
-                <div className="text-lg font-bold text-gray-900">3 Seconds</div>
+              <div className="group hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl mb-2">⚡</div>
+                <div className="text-2xl font-bold text-gray-900">3 Seconds</div>
                 <div className="text-gray-600">Average scan time</div>
               </div>
-              <div>
-                <div className="text-3xl mb-2">🎯</div>
-                <div className="text-lg font-bold text-gray-900">95% Accuracy</div>
+              <div className="group hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl mb-2">🎯</div>
+                <div className="text-2xl font-bold text-gray-900">95% Accuracy</div>
                 <div className="text-gray-600">On Indian products</div>
               </div>
-              <div>
-                <div className="text-3xl mb-2">📱</div>
-                <div className="text-lg font-bold text-gray-900">Works Offline</div>
+              <div className="group hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl mb-2">📱</div>
+                <div className="text-2xl font-bold text-gray-900">Works Offline</div>
                 <div className="text-gray-600">Basic scans available</div>
               </div>
             </div>

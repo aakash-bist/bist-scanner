@@ -5,6 +5,7 @@ import WhoItsFor from "@/components/WhoItsFor";
 import Features from "@/components/Features";
 import AppShowcase from "@/components/AppShowcase";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import Mission from "@/components/Mission";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -39,6 +40,7 @@ const Index = () => {
       <Features />
       <AppShowcase />
       <Testimonials />
+      <FAQ />
       <Mission />
       <FinalCTA />
       <Footer />

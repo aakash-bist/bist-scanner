@@ -1,5 +1,5 @@
 
-import { Star, Quote, TrendingUp, Users } from "lucide-react";
+import { Star, Quote, TrendingUp, Users, MapPin, Heart } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -11,7 +11,8 @@ const Testimonials = () => {
       avatar: "👩‍💼",
       rating: 5,
       verified: true,
-      productsSaved: "23 products avoided"
+      productsSaved: "23 products avoided",
+      scanCount: "150+ scans"
     },
     {
       name: "Dr. Arvind Kumar", 
@@ -21,67 +22,65 @@ const Testimonials = () => {
       avatar: "👨‍⚕️",
       rating: 5,
       verified: true,
-      productsSaved: "Professional endorsement"
+      productsSaved: "Professional endorsement",
+      scanCount: "500+ patients helped"
     },
     {
       name: "Meera Patel",
-      location: "Mumbai",
+      location: "Mumbai", 
       role: "Fitness Enthusiast",
       content: "Love how it scans supplements without barcodes! Found so many cleaner alternatives on Nykaa and Amazon. My skin has never looked better since switching products.",
       avatar: "💪",
       rating: 5,
       verified: true,
-      productsSaved: "40+ safer swaps"
+      productsSaved: "40+ safer swaps",
+      scanCount: "200+ products"
     },
     {
       name: "Rajesh Gupta",
       location: "Pune",
-      role: "Tech Professional",
-      content: "The OCR technology is incredible - works on regional brands that even Google Lens struggles with. Perfect for my family's Jain dietary requirements.",
+      role: "Tech Professional", 
+      content: "The OCR technology is incredible - works on regional brands that even Google Lens struggles with. Perfect for my family's dietary requirements.",
       avatar: "👨‍💻",
       rating: 5,
       verified: true,
-      productsSaved: "Family-approved"
+      productsSaved: "Family-approved",
+      scanCount: "300+ scans"
     }
   ];
 
   const stats = [
-    { number: "4.8", label: "App Store Rating", suffix: "★", description: "Highest rated Indian scanner" },
-    { number: "50K+", label: "Active Users", suffix: "", description: "Growing 25% monthly" },
-    { number: "1M+", label: "Daily Scans", suffix: "", description: "Products analyzed daily" },
-    { number: "95%", label: "User Satisfaction", suffix: "%", description: "Would recommend to friends" }
-  ];
-
-  const mediaMentions = [
-    { outlet: "Economic Times", quote: "Revolutionary app for Indian consumers" },
-    { outlet: "YourStory", quote: "The Yuka killer India needed" },
-    { outlet: "Inc42", quote: "AI-powered health guardian" }
+    { number: "4.8", label: "App Store Rating", suffix: "★", description: "Highest rated scanner", icon: "⭐" },
+    { number: "50K+", label: "Active Users", suffix: "", description: "Growing 25% monthly", icon: "👥" },
+    { number: "1M+", label: "Daily Scans", suffix: "", description: "Products analyzed", icon: "📱" },
+    { number: "95%", label: "Accuracy Rate", suffix: "%", description: "On Indian products", icon: "🎯" }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Enhanced stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 animate-on-scroll">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 animate-on-scroll">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent mb-2">
+              <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="text-3xl mb-3">{stat.icon}</div>
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent mb-2">
                   {stat.number}{stat.suffix}
                 </div>
-                <div className="text-gray-900 font-semibold mb-1">{stat.label}</div>
+                <div className="text-gray-900 font-semibold mb-1 text-sm">{stat.label}</div>
                 <div className="text-xs text-gray-500">{stat.description}</div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mb-20 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll">
           <div className="inline-flex items-center space-x-2 bg-safe/10 rounded-full px-6 py-3 mb-6">
-            <Users className="h-4 w-4 text-safe" />
+            <Heart className="h-4 w-4 text-safe" />
             <span className="text-safe font-semibold">User Love</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Trusted by Families
             <span className="block bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent">
               Across India
@@ -93,7 +92,7 @@ const Testimonials = () => {
         </div>
 
         {/* Enhanced testimonials */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
@@ -121,7 +120,10 @@ const Testimonials = () => {
                           )}
                         </div>
                         <div className="text-sm text-gray-600">{testimonial.role}</div>
-                        <div className="text-xs text-gray-500">{testimonial.location}</div>
+                        <div className="flex items-center space-x-1 text-xs text-gray-500">
+                          <MapPin className="h-3 w-3" />
+                          <span>{testimonial.location}</span>
+                        </div>
                       </div>
                     </div>
                     
@@ -131,7 +133,7 @@ const Testimonials = () => {
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      <div className="text-xs text-safe font-semibold">{testimonial.productsSaved}</div>
+                      <div className="text-xs text-safe font-semibold">{testimonial.scanCount}</div>
                     </div>
                   </div>
                   
@@ -143,77 +145,23 @@ const Testimonials = () => {
                     </blockquote>
                   </div>
                   
-                  {/* Engagement metrics */}
-                  <div className="flex items-center space-x-4 text-xs text-gray-500">
-                    <div className="flex items-center space-x-1">
-                      <TrendingUp className="h-3 w-3" />
-                      <span>Verified Purchase</span>
+                  {/* Impact metrics */}
+                  <div className="bg-safe/5 rounded-2xl p-4">
+                    <div className="flex items-center justify-between text-sm">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-safe rounded-full"></div>
+                        <span className="text-gray-600">{testimonial.productsSaved}</span>
+                      </div>
+                      <div className="flex items-center space-x-1 text-xs text-gray-500">
+                        <TrendingUp className="h-3 w-3" />
+                        <span>Verified Impact</span>
+                      </div>
                     </div>
-                    <div>•</div>
-                    <div>2 days ago</div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Media mentions */}
-        <div className="animate-on-scroll mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Featured In</h3>
-            <p className="text-gray-600">Leading publications recognize our impact</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {mediaMentions.map((mention, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
-                <div className="font-bold text-gray-900 mb-2">{mention.outlet}</div>
-                <div className="text-sm text-gray-600 italic">"{mention.quote}"</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Enhanced FAQ Preview */}
-        <div className="bg-gradient-to-r from-safe/5 via-blue-50 to-purple-50 rounded-3xl p-8 md:p-12 shadow-lg max-w-5xl mx-auto animate-on-scroll">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Answers</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6">
-                <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="w-2 h-2 bg-safe rounded-full mr-3"></span>
-                  Works on Indian regional brands?
-                </h4>
-                <p className="text-gray-700 text-sm">✅ Yes! Our OCR reads labels in 12+ Indian languages, even without barcodes.</p>
-              </div>
-              
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6">
-                <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Better than Yuka?
-                </h4>
-                <p className="text-gray-700 text-sm">✅ Absolutely! Built for Indian consumers with cultural preferences and local products.</p>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6">
-                <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  Need internet connection?
-                </h4>
-                <p className="text-gray-700 text-sm">⚡ Basic scans work offline. Deep analysis needs connection for latest data.</p>
-              </div>
-              
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6">
-                <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  Really free forever?
-                </h4>
-                <p className="text-gray-700 text-sm">✅ Yes! Core features will always be free. No hidden charges, no premium tiers.</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
