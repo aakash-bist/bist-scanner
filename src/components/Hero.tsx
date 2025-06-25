@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Shield, Star, Users, Globe, Play, ArrowRight, Lock, Brain, MapPin } from "lucide-react";
+import { Shield, Star, Users, Globe, Play, ArrowRight, Lock, Brain, MapPin, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -89,101 +89,124 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right side - Animated iPhone mockup */}
+            {/* Right side - Enhanced iPhone mockup with better animations */}
             <div className="relative animate-slide-in-right">
               <div className="relative max-w-sm mx-auto">
-                {/* Floating result badges */}
-                <div className="absolute -top-6 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl animate-bounce border border-green-200">
-                  <div className="text-2xl font-bold text-safe">SAFE</div>
-                  <div className="text-xs text-gray-600">Natural ingredients</div>
+                {/* Enhanced floating result badges with better positioning */}
+                <div className="absolute -top-8 -left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl animate-bounce border border-green-200 z-10">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="text-lg font-bold text-safe">SAFE</div>
+                  </div>
+                  <div className="text-xs text-gray-600 mt-1">Natural ingredients only</div>
                 </div>
-                <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce border border-orange-200" style={{ animationDelay: '0.5s' }}>
-                  <div className="text-xs font-bold text-orange-600">⚠️ AVOID</div>
-                  <div className="text-xs text-gray-500">Contains parabens</div>
+                
+                <div className="absolute -top-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-2xl animate-bounce border border-orange-200 z-10" style={{ animationDelay: '0.5s' }}>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                    <div className="text-sm font-bold text-orange-600">⚠️ AVOID</div>
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">Contains harmful chemicals</div>
                 </div>
 
-                {/* iPhone Frame - More realistic Apple design */}
-                <div className="relative bg-black rounded-[3.5rem] p-3 shadow-2xl">
-                  {/* Dynamic Island */}
-                  <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-28 h-7 bg-black rounded-full z-20 shadow-inner"></div>
+                <div className="absolute bottom-16 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-2xl animate-bounce border border-blue-200 z-10" style={{ animationDelay: '1s' }}>
+                  <div className="flex items-center space-x-2">
+                    <Zap className="w-4 h-4 text-blue-600" />
+                    <div className="text-sm font-bold text-blue-600">AI POWERED</div>
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">Smart detection</div>
+                </div>
+
+                {/* Premium iPhone Frame with better proportions */}
+                <div className="relative bg-gradient-to-b from-gray-900 to-black rounded-[3.5rem] p-2 shadow-2xl">
+                  {/* Dynamic Island - more realistic */}
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-black rounded-full z-30 shadow-inner border border-gray-800"></div>
                   
-                  {/* Screen */}
-                  <div className="bg-white rounded-[2.8rem] overflow-hidden relative">
-                    <div className="h-[640px] bg-gradient-to-b from-gray-50 to-white relative">
-                      {/* Animated scanning overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-safe/20 via-transparent to-safe/20 animate-pulse"></div>
+                  {/* Screen with better bezel */}
+                  <div className="bg-white rounded-[3rem] overflow-hidden relative shadow-inner">
+                    <div className="h-[680px] bg-gradient-to-b from-gray-50 to-white relative">
+                      {/* Enhanced scanning overlay with multiple effects */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-safe/10 via-transparent to-safe/10 animate-pulse"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-safe/20 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]"></div>
                       
-                      {/* Status Bar */}
-                      <div className="flex justify-between items-center px-8 pt-14 pb-4 relative z-10">
-                        <div className="text-sm font-semibold">9:41</div>
-                        <div className="flex items-center space-x-1">
+                      {/* Better Status Bar */}
+                      <div className="flex justify-between items-center px-8 pt-16 pb-6 relative z-20">
+                        <div className="text-sm font-semibold text-gray-900">9:41</div>
+                        <div className="flex items-center space-x-2">
                           <div className="flex space-x-1">
-                            <div className="w-1 h-3 bg-gray-800 rounded-full"></div>
-                            <div className="w-1 h-3 bg-gray-800 rounded-full"></div>
-                            <div className="w-1 h-3 bg-gray-800 rounded-full"></div>
+                            <div className="w-1 h-4 bg-gray-900 rounded-full"></div>
+                            <div className="w-1 h-4 bg-gray-900 rounded-full"></div>
+                            <div className="w-1 h-4 bg-gray-900 rounded-full"></div>
+                            <div className="w-1 h-4 bg-gray-400 rounded-full"></div>
                           </div>
-                          <div className="w-6 h-3 border border-gray-800 rounded-sm ml-1">
-                            <div className="w-4 h-2 bg-green-500 rounded-sm m-0.5"></div>
+                          <div className="w-7 h-4 border-2 border-gray-900 rounded-sm ml-2">
+                            <div className="w-5 h-2 bg-green-500 rounded-sm m-0.5"></div>
                           </div>
                         </div>
                       </div>
 
-                      {/* App Content - Animated Demo */}
+                      {/* Enhanced App Content with better animations */}
                       <div className="px-6 h-full flex flex-col relative">
-                        {/* Header with scan animation */}
-                        <div className="text-center mb-6">
-                          <div className="text-3xl font-bold text-gray-900 mb-2">Scanning...</div>
-                          <div className="w-16 h-1 bg-safe rounded-full mx-auto animate-pulse"></div>
-                        </div>
-
-                        {/* Product Image Placeholder with scan overlay */}
-                        <div className="relative mb-6">
-                          <div className="w-full h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                            <div className="text-4xl">🧴</div>
-                            {/* Scanning line animation */}
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-safe to-transparent animate-[slide-in-right_2s_ease-in-out_infinite]"></div>
+                        {/* Header with enhanced scan animation */}
+                        <div className="text-center mb-8">
+                          <div className="text-2xl font-bold text-gray-900 mb-3">Scanning Product...</div>
+                          <div className="flex justify-center space-x-1">
+                            <div className="w-2 h-2 bg-safe rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-safe rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-2 h-2 bg-safe rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                           </div>
                         </div>
 
-                        {/* Animated Results */}
-                        <div className="space-y-3 flex-1">
-                          <div className="bg-green-50 rounded-2xl p-4 border-l-4 border-green-500 animate-slide-in-left">
+                        {/* Enhanced Product Image with scan effects */}
+                        <div className="relative mb-8">
+                          <div className="w-full h-36 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl flex items-center justify-center relative overflow-hidden shadow-inner">
+                            <div className="text-5xl">🧴</div>
+                            {/* Multiple scanning line animations */}
+                            <div className="absolute top-4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-safe to-transparent animate-[slide-in-right_2s_ease-in-out_infinite]"></div>
+                            <div className="absolute top-8 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent animate-[slide-in-right_2.5s_ease-in-out_infinite]" style={{ animationDelay: '0.5s' }}></div>
+                            <div className="absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}></div>
+                          </div>
+                        </div>
+
+                        {/* Enhanced Animated Results with better styling */}
+                        <div className="space-y-4 flex-1">
+                          <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-5 border-l-4 border-green-500 animate-slide-in-left shadow-lg">
                             <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-2">
-                                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                <span className="text-sm font-medium text-green-800">Natural Vitamins</span>
+                              <div className="flex items-center space-x-3">
+                                <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                                <span className="text-sm font-semibold text-green-800">Natural Vitamins E & C</span>
                               </div>
-                              <span className="text-xs text-green-600 font-bold">✓ SAFE</span>
+                              <span className="text-xs text-green-600 font-bold bg-green-200 px-2 py-1 rounded-full">✓ SAFE</span>
                             </div>
                           </div>
 
-                          <div className="bg-yellow-50 rounded-2xl p-4 border-l-4 border-yellow-500 animate-slide-in-left" style={{ animationDelay: '0.3s' }}>
+                          <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-2xl p-5 border-l-4 border-yellow-500 animate-slide-in-left shadow-lg" style={{ animationDelay: '0.3s' }}>
                             <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-2">
-                                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                <span className="text-sm font-medium text-yellow-800">Artificial Color</span>
+                              <div className="flex items-center space-x-3">
+                                <div className="w-4 h-4 bg-yellow-500 rounded-full animate-pulse"></div>
+                                <span className="text-sm font-semibold text-yellow-800">Artificial Fragrance</span>
                               </div>
-                              <span className="text-xs text-yellow-600 font-bold">⚠ MODERATE</span>
+                              <span className="text-xs text-yellow-600 font-bold bg-yellow-200 px-2 py-1 rounded-full">⚠ MODERATE</span>
                             </div>
                           </div>
 
-                          <div className="bg-red-50 rounded-2xl p-4 border-l-4 border-red-500 animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
+                          <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-5 border-l-4 border-red-500 animate-slide-in-left shadow-lg" style={{ animationDelay: '0.6s' }}>
                             <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-2">
-                                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                                <span className="text-sm font-medium text-red-800">Parabens</span>
+                              <div className="flex items-center space-x-3">
+                                <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+                                <span className="text-sm font-semibold text-red-800">Sodium Lauryl Sulfate</span>
                               </div>
-                              <span className="text-xs text-red-600 font-bold">✗ AVOID</span>
+                              <span className="text-xs text-red-600 font-bold bg-red-200 px-2 py-1 rounded-full">✗ AVOID</span>
                             </div>
                           </div>
                         </div>
 
-                        {/* Action Buttons */}
-                        <div className="pb-8 space-y-3 mt-6">
-                          <button className="w-full bg-safe text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                        {/* Enhanced Action Buttons */}
+                        <div className="pb-8 space-y-3 mt-8">
+                          <button className="w-full bg-gradient-to-r from-safe to-safe-dark text-white py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                             Find Safer Alternative
                           </button>
-                          <button className="w-full border-2 border-gray-200 text-gray-700 py-3 rounded-2xl font-medium">
+                          <button className="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-2xl font-medium hover:border-safe hover:text-safe transition-colors duration-300">
                             Save to Safe List
                           </button>
                         </div>

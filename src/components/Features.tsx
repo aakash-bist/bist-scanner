@@ -1,4 +1,3 @@
-
 import { Zap, Shield, Heart, Users, Award, Search, Filter, Globe, Smartphone, Star } from "lucide-react";
 
 const Features = () => {
@@ -54,9 +53,8 @@ const Features = () => {
   ];
 
   const comparisons = [
-    { app: "Is This Safe", ocr: true, indian: true, hindi: true, cultural: true, offline: true, ecommerce: true },
-    { app: "Yuka", ocr: false, indian: false, hindi: false, cultural: false, offline: false, ecommerce: false },
-    { app: "Think Dirty", ocr: false, indian: false, hindi: false, cultural: false, offline: false, ecommerce: false }
+    { app: "Is This Safe", ocr: true, indian: true, hindi: true, cultural: true, ecommerce: true },
+    { app: "Other Apps", ocr: false, indian: false, hindi: false, cultural: false, ecommerce: false }
   ];
 
   return (
@@ -67,10 +65,10 @@ const Features = () => {
             <Star className="h-4 w-4 text-safe fill-current" />
             <span className="text-safe font-semibold">Superior Features</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-            Why We're Better
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
+            <span className="block">Experience the</span>
             <span className="block bg-gradient-to-r from-safe to-blue-600 bg-clip-text text-transparent">
-              Than Yuka
+              Future of Shopping
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -110,62 +108,99 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Comparison table */}
+        {/* Enhanced comparison section */}
         <div className="animate-on-scroll mb-20">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-r from-safe to-safe-dark p-6">
-              <h3 className="text-2xl font-bold text-white text-center">
-                Feature Comparison vs Competition
+          <div className="bg-gradient-to-br from-white via-safe/5 to-blue-50/30 rounded-3xl shadow-2xl overflow-hidden border border-gray-100 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-r from-safe via-safe-dark to-blue-600 p-8">
+              <h3 className="text-3xl font-bold text-white text-center mb-2">
+                Why Choose Us?
               </h3>
+              <p className="text-white/90 text-center text-lg">
+                Compare features that matter for Indian families
+              </p>
             </div>
             
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-4 text-left font-semibold text-gray-900">App</th>
-                    <th className="px-4 py-4 text-center font-semibold text-gray-900">OCR Scanning</th>
-                    <th className="px-4 py-4 text-center font-semibold text-gray-900">Indian Products</th>
-                    <th className="px-4 py-4 text-center font-semibold text-gray-900">Hindi Support</th>
-                    <th className="px-4 py-4 text-center font-semibold text-gray-900">Cultural Filters</th>
-                    <th className="px-4 py-4 text-center font-semibold text-gray-900">Offline Mode</th>
-                    <th className="px-4 py-4 text-center font-semibold text-gray-900">E-commerce Links</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisons.map((comp, index) => (
-                    <tr key={index} className={index === 0 ? "bg-safe/5 border-l-4 border-safe" : "border-b border-gray-100"}>
-                      <td className="px-6 py-4">
-                        <div className="flex items-center space-x-3">
-                          {index === 0 && <div className="w-3 h-3 bg-safe rounded-full"></div>}
-                          <span className={`font-semibold ${index === 0 ? "text-safe" : "text-gray-900"}`}>
-                            {comp.app}
-                          </span>
-                          {index === 0 && <span className="text-xs bg-safe text-white px-2 py-1 rounded-full">YOU</span>}
-                        </div>
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        {comp.ocr ? "✅" : "❌"}
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        {comp.indian ? "✅" : "❌"}
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        {comp.hindi ? "✅" : "❌"}
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        {comp.cultural ? "✅" : "❌"}
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        {comp.offline ? "✅" : "❌"}
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        {comp.ecommerce ? "✅" : "❌"}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Our App */}
+                <div className="bg-gradient-to-br from-safe/10 to-safe/5 rounded-2xl p-6 border-2 border-safe/20">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="w-4 h-4 bg-safe rounded-full"></div>
+                    <h4 className="text-xl font-bold text-safe">Is This Safe</h4>
+                    <span className="text-xs bg-safe text-white px-3 py-1 rounded-full font-bold">YOU</span>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">OCR Scanning</span>
+                      <div className="text-green-600 text-xl">✅</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">Indian Products</span>
+                      <div className="text-green-600 text-xl">✅</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">Hindi Support</span>
+                      <div className="text-green-600 text-xl">✅</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">Cultural Filters</span>
+                      <div className="text-green-600 text-xl">✅</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">E-commerce Links</span>
+                      <div className="text-green-600 text-xl">✅</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Other Apps */}
+                <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="w-4 h-4 bg-gray-400 rounded-full"></div>
+                    <h4 className="text-xl font-bold text-gray-700">Other Apps</h4>
+                    <span className="text-xs bg-gray-400 text-white px-3 py-1 rounded-full font-bold">THEM</span>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">OCR Scanning</span>
+                      <div className="text-red-500 text-xl">❌</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">Indian Products</span>
+                      <div className="text-red-500 text-xl">❌</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">Hindi Support</span>
+                      <div className="text-red-500 text-xl">❌</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">Cultural Filters</span>
+                      <div className="text-red-500 text-xl">❌</div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">E-commerce Links</span>
+                      <div className="text-red-500 text-xl">❌</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom CTA */}
+              <div className="text-center mt-8">
+                <div className="bg-gradient-to-r from-safe/20 to-blue-500/20 rounded-2xl p-6">
+                  <h5 className="text-xl font-bold text-gray-900 mb-2">
+                    The Choice is Clear
+                  </h5>
+                  <p className="text-gray-600 mb-4">
+                    Join thousands of Indian families making safer choices every day
+                  </p>
+                  <button className="bg-gradient-to-r from-safe to-safe-dark text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
+                    Start Scanning Now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
